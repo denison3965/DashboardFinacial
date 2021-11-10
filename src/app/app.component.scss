@@ -1,0 +1,18 @@
+.fundo {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--back-color);
+    .container-main {
+        padding: 10px;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        .left-side {
+            flex: 1;
+        }
+        .right-side {
+            flex: 20;
+        }
+    }
+}
