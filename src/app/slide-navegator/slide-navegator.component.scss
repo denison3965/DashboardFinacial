@@ -4,7 +4,54 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 70px;
     height: 100%;
-    .log-area {}
-    .icons-navigation-area {}
-    .bottom-area {}
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .log-area {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .icons-navigation-area {
+        flex: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .icon-navagation {
+            opacity: 0.8;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            transform: scale(1.2);
+            transition: all ease 0.2s;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+        .icon-navagation-disabled {
+            opacity: 0.5;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            transform: scale(1.0);
+            transition: all ease 0.2s;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+    .bottom-area {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.5;
+        cursor: pointer;
+    }
 }
