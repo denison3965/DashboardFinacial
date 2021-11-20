@@ -15,9 +15,8 @@
             flex: 20;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 30px;
+            margin-left: 30px;
+            margin-right: 30px;
             .top-info {
                 display: flex;
                 justify-content: space-between;
@@ -33,14 +32,16 @@
                         align-items: center;
                         height: 100%;
                         .avatar {
-                            width: 40px;
-                            height: 40px;
+                            width: 35px;
+                            height: 35px;
                             border-radius: 20px;
                             background-color: gray;
                             margin-left: 5px;
                             margin-right: 5px;
                         }
-                        .icon-arrow-down {}
+                        .icon-arrow-down {
+                            cursor: pointer;
+                        }
                     }
                     .theme-icon {
                         display: flex;
@@ -48,6 +49,7 @@
                         align-items: center;
                         margin-left: 20px;
                         margin-right: 20px;
+                        cursor: pointer;
                     }
                     .name-user {
                         display: flex;
@@ -57,7 +59,53 @@
                 }
             }
             section {
+                display: flex;
                 flex: 10;
+                flex-direction: column;
+                .section-top {
+                    flex: 1;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 40px;
+                    .welcome-area {
+                        letter-spacing: 2px;
+                        .name-plataform {
+                            font-size: 10px;
+                            opacity: 0.7;
+                        }
+                        .welcome {
+                            display: flex;
+                            margin-top: 10px;
+                            .welcome-back {
+                                font-size: 22px;
+                                font-weight: 300;
+                                .username {
+                                    font-size: 22px;
+                                    font-weight: 100;
+                                    opacity: 0.8;
+                                }
+                            }
+                        }
+                    }
+                    .button-area {
+                        .button {
+                            background: #000000;
+                            border-radius: 10px;
+                            box-shadow: 1px 2px 4px rgb(0, 0, 0);
+                            padding: 10px 20px;
+                            color: #ffffff;
+                            display: inline-block;
+                            font: normal 12px "Roboto", sans-serif;
+                            text-align: center;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .section-buttom {
+                    flex: 10;
+                }
             }
         }
     }
