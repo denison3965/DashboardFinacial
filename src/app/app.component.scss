@@ -63,12 +63,13 @@
                 flex: 10;
                 flex-direction: column;
                 .section-top {
+                    margin-bottom: 20px;
                     flex: 1;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     width: 100%;
-                    margin-top: 40px;
+                    margin-top: 10px;
                     .welcome-area {
                         letter-spacing: 2px;
                         .name-plataform {
@@ -105,6 +106,27 @@
                 }
                 .section-buttom {
                     flex: 10;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    margin-bottom: 30px;
+                    background-color: red;
+                    .dashboard-top {
+                        flex: 1;
+                        height: 50%;
+                        display: flex;
+                        .dashboard-top-left-side {
+                            flex: 1;
+                        }
+                        .dashboard-top-right-side {
+                            flex: 1;
+                        }
+                    }
+                    .dashboard-bottom {
+                        background-color: green;
+                        height: 50%;
+                        flex: 1;
+                    }
                 }
             }
         }
