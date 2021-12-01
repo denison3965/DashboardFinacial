@@ -1,6 +1,7 @@
 import { IBOVESPAServiceService } from './../../services/ibovespaservice/ibovespaservice.service';
 import { Component, ElementRef, OnInit, ViewChild,  } from '@angular/core';
 import Chart from 'chart.js/auto';
+import { IibovespaDatas } from 'src/services/ibovespaservice/DTO-IBOVESPA-datas';
 
 @Component({
   selector: 'app-stock-exchange-dashboard',
@@ -17,24 +18,42 @@ export class StockExchangeDashboardComponent implements OnInit {
   ngOnInit(): void {
 
     this.ibovespaService.getDataStockExchange().subscribe(
-      res => {
+      (res: Array<IibovespaDatas>)  => {
 
+        var datasToDashboard: Array<any> = [];
+        var lablesToDashboard: Array<any> = [];
+
+        res.forEach(element => {
+          datasToDashboard.push(element.fechamento);
+          lablesToDashboard.push(element.data);
+        });
+
+        this.elemento.nativeElement.height = 80;
+        new Chart(this.elemento.nativeElement, {
+          type : 'line',
+          data:{
+            labels: lablesToDashboard,
+            datasets: [
+              {
+                label: 'Last datas',
+                data: datasToDashboard,
+              }
+            ]
+          },
+          options: {
+            plugins: {
+              legend: {
+                display: false
+              }
+            },
+
+          }
+        });
       },
       () => {
 
       });
 
-    this.elemento.nativeElement.height = 200;
-    new Chart(this.elemento.nativeElement, {
-      type : 'line',
-      data:{
-        labels: ['1', '2', '3'],
-        datasets: [
-          {
-            data: [23,34,32]
-          }
-        ]
-      }
-    });
+
   }
 }

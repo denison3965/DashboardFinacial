@@ -1,3 +1,4 @@
+import { IibovespaDatas } from './DTO-IBOVESPA-datas';
 import { Configuration } from './../../constants/configurations';
 import { BaseSerive } from './../base.service';
 import { Injectable } from '@angular/core';
@@ -17,12 +18,14 @@ export class IBOVESPAServiceService extends BaseSerive {
     super();
   }
 
-  public getDataStockExchange(): Observable<any> {
+  public getDataStockExchange(): Observable<IibovespaDatas[]> {
     return this._http.get<any>( this._config.environment.API.ibovesta.base_url )
     .pipe(
       timeout(30000),
-      map(res => {
+      map(res  => {
         console.log(res);
+
+        return res.bovespa as Array<IibovespaDatas>;
       })
     )
   }

@@ -6,6 +6,20 @@
     height: 100%;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     padding-top: 20px;
     padding-bottom: 20px;
+    .description {
+        margin-left: 30px;
+        .main {
+            margin-bottom: 5px;
+        }
+        .secondary {
+            color: gray;
+            font-size: small;
+        }
+    }
+    .board-area {
+        width: 100%;
+    }
 }

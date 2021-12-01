@@ -110,20 +110,18 @@
                     flex-direction: column;
                     width: 100%;
                     margin-bottom: 30px;
-                    background-color: red;
                     .dashboard-top {
                         flex: 1;
                         height: 50%;
                         display: flex;
                         .dashboard-top-left-side {
-                            flex: 1;
+                            flex: 2;
                         }
                         .dashboard-top-right-side {
                             flex: 1;
                         }
                     }
                     .dashboard-bottom {
-                        background-color: green;
                         height: 50%;
                         flex: 1;
                     }
