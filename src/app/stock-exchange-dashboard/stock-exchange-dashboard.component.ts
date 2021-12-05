@@ -28,15 +28,18 @@ export class StockExchangeDashboardComponent implements OnInit {
           lablesToDashboard.push(element.data);
         });
 
-        this.elemento.nativeElement.height = 80;
+
+        this.elemento.nativeElement.height = 85;
         new Chart(this.elemento.nativeElement, {
           type : 'line',
+
           data:{
             labels: lablesToDashboard,
             datasets: [
               {
                 label: 'Last datas',
                 data: datasToDashboard,
+                tension: 0.2
               }
             ]
           },

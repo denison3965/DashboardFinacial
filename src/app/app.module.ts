@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { SlideNavegatorComponent } from './slide-navegator/slide-navegator.component';
 import { StockExchangeDashboardComponent } from './stock-exchange-dashboard/stock-exchange-dashboard.component';
 import { Configuration } from 'src/constants/configurations';
+import { DashboarSingleActiveComponent } from './dashboar-single-active/dashboar-single-active.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { Configuration } from 'src/constants/configurations';
     AppComponent,
     SlideNavegatorComponent,
     StockExchangeDashboardComponent,
+    DashboarSingleActiveComponent,
   ],
   imports: [
     BrowserModule,
