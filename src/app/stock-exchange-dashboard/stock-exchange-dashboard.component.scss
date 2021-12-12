@@ -18,6 +18,10 @@
         }
         .main {
             margin-bottom: 5px;
+            font-size: x-large;
+            background: -webkit-linear-gradient(black, rgb(130, 129, 129));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .secondary {
             color: gray;

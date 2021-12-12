@@ -6,6 +6,7 @@ import { SlideNavegatorComponent } from './slide-navegator/slide-navegator.compo
 import { StockExchangeDashboardComponent } from './stock-exchange-dashboard/stock-exchange-dashboard.component';
 import { Configuration } from 'src/constants/configurations';
 import { DashboarSingleActiveComponent } from './dashboar-single-active/dashboar-single-active.component';
+import { CoinBoardComponent } from './coin-board/coin-board.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { DashboarSingleActiveComponent } from './dashboar-single-active/dashboar
     SlideNavegatorComponent,
     StockExchangeDashboardComponent,
     DashboarSingleActiveComponent,
+    CoinBoardComponent,
   ],
   imports: [
     BrowserModule,

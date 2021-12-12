@@ -1,0 +1,52 @@
+.skeleton {
+    background-color: var(--components-back-color);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    .top {
+        flex: 1;
+        .area-nome {
+            display: flex;
+            .nome-coin {
+                font-size: large;
+                background: -webkit-linear-gradient(black, rgb(130, 129, 129));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .seta {
+                margin-left: 10px;
+                cursor: pointer;
+                font-size: x-large;
+                background: -webkit-linear-gradient(black, rgb(130, 129, 129));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-top: -3px;
+            }
+        }
+        .area-info {
+            display: flex;
+            margin-top: 5px;
+            .variacao {
+                background-image: linear-gradient(to bottom right, green, rgb(102, 199, 102));
+                box-shadow: 0 0 10px rgba(13, 255, 0, 0.542);
+                color: honeydew;
+                padding-left: 15px;
+                padding-right: 15px;
+                border-radius: 13px;
+            }
+            .price {
+                margin-left: 20px;
+                background: -webkit-linear-gradient(black, rgb(106, 105, 105));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+    .bottom {
+        flex: 4;
+    }
+}

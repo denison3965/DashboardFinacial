@@ -129,6 +129,18 @@
                     .dashboard-bottom {
                         height: 50%;
                         flex: 3;
+                        display: flex;
+                        margin-top: 16px;
+                        .left-area {
+                            flex: 2;
+                            display: flex;
+                        }
+                        .right-area {
+                            background-color: green;
+                            flex: 1;
+                            margin-left: 8px;
+                            margin-right: 8px;
+                        }
                     }
                 }
             }
