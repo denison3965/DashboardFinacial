@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import Chart from 'chart.js/auto';
 
 @Component({
@@ -7,12 +7,21 @@ import Chart from 'chart.js/auto';
   styleUrls: ['./dashboar-single-active.component.scss']
 })
 export class DashboarSingleActiveComponent implements OnInit {
+
+  @Input() pathImageCoin!: string;
+  @Input() size!: string;
+
+  public test = '100px';
+
   @ViewChild('coinBoard', {static: true}) elemento!: ElementRef;
   public bitcoin = 48502.00;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
+
+
     this.elemento.nativeElement.height = 70;
     new Chart(this.elemento.nativeElement, {
       type : 'line',
