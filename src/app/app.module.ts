@@ -7,6 +7,7 @@ import { StockExchangeDashboardComponent } from './stock-exchange-dashboard/stoc
 import { Configuration } from 'src/constants/configurations';
 import { DashboarSingleActiveComponent } from './dashboar-single-active/dashboar-single-active.component';
 import { CoinBoardComponent } from './coin-board/coin-board.component';
+import { ListMainCoinComponent } from './list-main-coin/list-main-coin.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { CoinBoardComponent } from './coin-board/coin-board.component';
     StockExchangeDashboardComponent,
     DashboarSingleActiveComponent,
     CoinBoardComponent,
+    ListMainCoinComponent,
   ],
   imports: [
     BrowserModule,
