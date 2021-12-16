@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DashboardFinacial';
+
+  public currentPage = "dashBoardPage";
+
+  onChangePage(evento: string){
+    this.currentPage = evento;
+  }
 }

@@ -1,9 +1,9 @@
 <section class="fundo">
     <div class="container-main">
         <div class="left-side">
-            <app-slide-navegator></app-slide-navegator>
+            <app-slide-navegator (changePage)="onChangePage($event)"></app-slide-navegator>
         </div>
-        <div class="right-side">
+        <div *ngIf="currentPage === 'dashBoardPage'" class="right-side">
             <div class="top-info">
                 <div class="search-area"></div>
                 <div class="info-area">
@@ -53,6 +53,66 @@
                 </div>
             </section>
         </div>
-    </div>
 
+        <div *ngIf="currentPage === 'curreciesPage'" class="right-side">
+            <div class="top-info">
+                <div class="search-area"></div>
+                <div class="info-area">
+                    <div class="name-user">username</div>
+                    <div class="theme-icon">
+                        <img src="assets/images/sun.png" alt="theme-color" height="20px" width="20px">
+                    </div>
+                    <div class="avatar-area">
+                        <div class="avatar"></div>
+                        <div class="icon-arrow-down">
+                            <img src="assets/images/down-arrow.png" alt="down-arrow" width="12px" height="12px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section>
+                <div class="section-top">
+                    <div class="welcome-area">
+                        <div class="name-plataform">FINANCE PLATAFORM DASHBOARD</div>
+                        <div class="welcome">
+                            <div class="welcome-back"><strong>Currecies</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-area">
+                        <div class="button">Dashboard</div>
+                    </div>
+                </div>
+                <div class="section-buttom">
+                    <div class="currecies-area">
+                        <div class="currecie-area">
+                            <app-coin-board style="flex: 1; margin-right: 8px;"></app-coin-board>
+                        </div>
+                        <div class="currecie-area">
+                            <app-coin-board style="flex: 1; margin-right: 8px;"></app-coin-board>
+                        </div>
+                        <div class="currecie-area">
+                            <app-coin-board style="flex: 1; margin-right: 8px;"></app-coin-board>
+                        </div>
+                        <div class="currecie-area">
+                            <app-coin-board style="flex: 1; margin-right: 8px;"></app-coin-board>
+                        </div>
+                        <div class="currecie-area">
+                            <app-coin-board style="flex: 1; margin-right: 8px;"></app-coin-board>
+                        </div>
+                        <div class="currecie-area">
+                            <app-coin-board style="flex: 1; margin-right: 8px;"></app-coin-board>
+                        </div>
+                        <div class="currecie-area">
+                            <app-coin-board style="flex: 1; margin-right: 8px;"></app-coin-board>
+                        </div>
+
+
+                    </div>
+                    <!-- <app-coin-board style="flex: 1; margin-right: 8px;"></app-coin-board>
+                  <app-coin-board style="flex: 1; margin-left: 8px;"></app-coin-board> -->
+                </div>
+            </section>
+        </div>
+    </div>
 </section>

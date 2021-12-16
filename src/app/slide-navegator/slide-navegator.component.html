@@ -3,11 +3,11 @@
         <img class="img-logo" src="assets/images/logo.png" alt="logo" width="30px" height="20px">
     </div>
     <div class="icons-navigation-area">
-        <div class="icon-navagation">
+        <div #dashBoaardIcon (click)="goToDashBoard()" [class.icon-navagation]="currentPage === 'dashBoardPage'" [class.icon-navagation-disabled]="currentPage !== 'dashBoardPage'">
             <img src="assets/images/layout.png" alt="" height="20px" width="20px">
         </div>
-        <div class="icon-navagation-disabled">
-            <img class="img-logo" src="assets/images/balance-sheet.png" alt="logo" width="20px" height="20px">
+        <div #curreciesIcon (click)="goToCurrecies()" [class.icon-navagation]="currentPage === 'curreciesPage'" [class.icon-navagation-disabled]="currentPage !== 'curreciesPage'">
+            <img class="img-logo" src="assets/images/money.png" alt="logo" width="20px" height="20px">
         </div>
     </div>
     <div class="bottom-area">

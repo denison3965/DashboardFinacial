@@ -1,6 +1,5 @@
 .fundo {
-    width: 100vw;
-    height: 100vh;
+    max-width: 100vw;
     background-color: var(--back-color);
     .container-main {
         padding: 10px;
@@ -110,6 +109,15 @@
                     flex-direction: column;
                     width: 100%;
                     margin-bottom: 30px;
+                    .currecies-area {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        .currecie-area {
+                            padding: 8px;
+                            width: 33%;
+                        }
+                    }
                     .dashboard-top {
                         flex: 4;
                         height: 50%;
