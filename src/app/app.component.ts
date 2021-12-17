@@ -10,6 +10,20 @@ export class AppComponent implements OnInit {
   title = 'DashboardFinacial';
 
   public currentPage = "dashBoardPage";
+  public currenciesSiglas = [
+    "USD",
+    "EUR",
+    "BTC",
+    "ETH",
+    "NOK",
+    "MXN",
+    "THB",
+    "NZD",
+    "CHF",
+    "BOB",
+    "CNY",
+    "LTC"
+  ];
 
   constructor(
     private finalciaApiService: FinalciaApiService

@@ -5,7 +5,7 @@
             <div class="seta">></div>
         </div>
         <div class="area-info">
-            <div class="variacao">{{variation}}</div>
+            <div class="variacao" [class.variacao-green]="colorVariation === 'green'" [class.variacao-red]="colorVariation === 'red'">{{variation}}</div>
             <div class="price"><strong> {{ price | currency:'BRL':true}} </strong></div>
         </div>
     </div>

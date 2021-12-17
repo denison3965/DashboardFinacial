@@ -15,6 +15,7 @@ export class CoinBoardComponent implements OnInit {
   public nameCurrencie =  "";
   public variation = "0%";
   public price = 0;
+  public colorVariation = "green";
 
   constructor(
     private finalciaApiService: FinalciaApiService
@@ -27,6 +28,11 @@ export class CoinBoardComponent implements OnInit {
 
         this.variation = result[result.length -1].varBid + "%";
         this.price = parseFloat(result[result.length - 1].high);
+
+        if (this.variation.indexOf("-") != -1)
+        {
+          this.colorVariation = "red";
+        }
 
         console.log(this.price);
 
@@ -71,3 +77,7 @@ export class CoinBoardComponent implements OnInit {
 
   }
 }
+
+
+
+

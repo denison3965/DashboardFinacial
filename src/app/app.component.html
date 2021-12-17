@@ -37,8 +37,8 @@
                             <app-stock-exchange-dashboard></app-stock-exchange-dashboard>
                         </div>
                         <div class="dashboard-top-right-side">
-                            <app-dashboar-single-active pathImageCoin='assets/images/btc1.gif' size='65px' style="flex: 1;"></app-dashboar-single-active>
-                            <app-dashboar-single-active pathImageCoin='assets/images/thr.gif' size='120px' style="flex: 1; margin-top: 16px;"></app-dashboar-single-active>
+                            <app-dashboar-single-active coin="BTC-USD" pathImageCoin='assets/images/btc1.gif' size='65px' style="flex: 1;"></app-dashboar-single-active>
+                            <app-dashboar-single-active coin="ETH-USD" pathImageCoin='assets/images/thr.gif' size='120px' style="flex: 1; margin-top: 16px;"></app-dashboar-single-active>
                         </div>
                     </div>
                     <div class="dashboard-bottom">
@@ -85,29 +85,9 @@
                 </div>
                 <div class="section-buttom">
                     <div class="currecies-area">
-                        <div class="currecie-area">
-                            <app-coin-board style="flex: 1; margin-right: 8px;"></app-coin-board>
+                        <div *ngFor="let sigla of currenciesSiglas" class="currecie-area">
+                            <app-coin-board [typeCurrencie]="sigla" style="flex: 1; margin-right: 8px;"></app-coin-board>
                         </div>
-                        <div class="currecie-area">
-                            <app-coin-board style="flex: 1; margin-right: 8px;"></app-coin-board>
-                        </div>
-                        <div class="currecie-area">
-                            <app-coin-board style="flex: 1; margin-right: 8px;"></app-coin-board>
-                        </div>
-                        <div class="currecie-area">
-                            <app-coin-board style="flex: 1; margin-right: 8px;"></app-coin-board>
-                        </div>
-                        <div class="currecie-area">
-                            <app-coin-board style="flex: 1; margin-right: 8px;"></app-coin-board>
-                        </div>
-                        <div class="currecie-area">
-                            <app-coin-board style="flex: 1; margin-right: 8px;"></app-coin-board>
-                        </div>
-                        <div class="currecie-area">
-                            <app-coin-board style="flex: 1; margin-right: 8px;"></app-coin-board>
-                        </div>
-
-
                     </div>
                     <!-- <app-coin-board style="flex: 1; margin-right: 8px;"></app-coin-board>
                   <app-coin-board style="flex: 1; margin-left: 8px;"></app-coin-board> -->

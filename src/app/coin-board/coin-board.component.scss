@@ -31,12 +31,18 @@
             display: flex;
             margin-top: 5px;
             .variacao {
-                background-image: linear-gradient(to bottom right, green, rgb(102, 199, 102));
-                box-shadow: 0 0 10px rgba(13, 255, 0, 0.542);
                 color: honeydew;
                 padding-left: 15px;
                 padding-right: 15px;
                 border-radius: 13px;
+            }
+            .variacao-red {
+                background-image: linear-gradient(to bottom right, rgb(240, 2, 2), rgb(209, 63, 63));
+                box-shadow: 0 0 10px rgba(255, 0, 0, 0.542);
+            }
+            .variacao-green {
+                background-image: linear-gradient(to bottom right, green, rgb(102, 199, 102));
+                box-shadow: 0 0 10px rgba(13, 255, 0, 0.542);
             }
             .price {
                 margin-left: 20px;
