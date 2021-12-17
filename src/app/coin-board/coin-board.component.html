@@ -1,12 +1,12 @@
 <div class="skeleton">
     <div class="top">
         <div class="area-nome">
-            <div class="nome-coin"> <strong>Dolar Comercial</strong> </div>
+            <div class="nome-coin"> <strong>{{nameCurrencie}}</strong> </div>
             <div class="seta">></div>
         </div>
         <div class="area-info">
-            <div class="variacao">+0.72%</div>
-            <div class="price"><strong>R$ 5,614</strong></div>
+            <div class="variacao">{{variation}}</div>
+            <div class="price"><strong> {{ price | currency:'BRL':true}} </strong></div>
         </div>
     </div>
     <div class="bottom">
