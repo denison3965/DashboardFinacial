@@ -34,6 +34,12 @@
         display: flex;
         .taable {
             width: 100%;
+            .variacao-red {
+                color: red;
+            }
+            .variacao-green {
+                color: green;
+            }
         }
     }
 }

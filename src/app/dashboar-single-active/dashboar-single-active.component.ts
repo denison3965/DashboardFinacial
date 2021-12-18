@@ -27,7 +27,7 @@ export class DashboarSingleActiveComponent implements OnInit {
   ngOnInit(): void {
 
 
-    this.finalciaApiService.getCurrentQuote(this.coin).subscribe(
+    this.finalciaApiService.getDayli5daysQuoteCurrencie(this.coin).subscribe(
       (result: DTO_dayli_quote_currencie[]) => {
         this.price = parseFloat(result[0].high);
         this.nameCoin = result[0].name;

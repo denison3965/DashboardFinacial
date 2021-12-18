@@ -7,36 +7,13 @@
     </div>
     <div class='bottom'>
         <table class="taable">
-            <tbody>
+            <tbody *ngFor="let currencie of currencies">
                 <tr>
-                    <td>Mark</td>
-                    <td style=" color: green; ">+1,04%</td>
-                    <td>@mdo</td>
+                    <td>{{currencie.name}}</td>
+                    <td [class.variacao-green]="isPositive(currencie.varBid)" [class.variacao-red]="isNegative(currencie.varBid)">{{currencie.varBid}}%</td>
+                    <td>{{ currencie.high | currency:'BRL':true}}</td>
                 </tr>
                 <hr>
-                <tr>
-                    <td>Mark</td>
-                    <td style="color: green; ">+1,04%</td>
-                    <td>@mdo</td>
-                </tr>
-                <hr>
-                <tr>
-                    <td>Mark</td>
-                    <td style="color: green; ">+1,04%</td>
-                    <td>@mdo</td>
-                </tr>
-                <hr>
-                <tr>
-                    <td>Mark</td>
-                    <td style="color: green; ">+1,04%</td>
-                    <td>@mdo</td>
-                </tr>
-                <hr>
-                <tr>
-                    <td>Mark</td>
-                    <td style="color: green; ">+1,04%</td>
-                    <td>@mdo</td>
-                </tr>
             </tbody>
         </table>
     </div>

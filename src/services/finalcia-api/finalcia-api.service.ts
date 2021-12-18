@@ -28,7 +28,7 @@ export class FinalciaApiService extends BaseSerive {
       })
     );
    }
-   public getCurrentQuote(nameCurrencie: string): Observable<DTO_dayli_quote_currencie[]> {
+   public getDayli5daysQuoteCurrencie(nameCurrencie: string): Observable<DTO_dayli_quote_currencie[]> {
 
       return this._http.get<DTO_dayli_quote_currencie[]>(this._config.environment.API.financial.base_url+'/daily/'+nameCurrencie+"/5")
       .pipe(
@@ -38,6 +38,16 @@ export class FinalciaApiService extends BaseSerive {
           return res;
         })
       );
+   }
+
+   public getCurrentQuote(nameCurrencies: string): Observable<any> {
+    return this._http.get<DTO_dayli_quote_currencie[]>(this._config.environment.API.financial.base_url+'/last/'+nameCurrencies)
+    .pipe(
+      timeout(30000),
+      map((res: any) => {
+        return res;
+      })
+    );
 
    }
 }
